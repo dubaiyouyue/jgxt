@@ -9,8 +9,8 @@ header("Content-Type: text/html; charset=utf-8");
 
 $dbms='mysql';     //数据库类型
 $host='localhost'; //数据库主机名
-$dbName='team';    //使用的数据库
-$user='team';      //数据库连接用户名
+$dbName='root';    //使用的数据库
+$user='root';      //数据库连接用户名
 $pass='a6d4P7b3';          //对应的密码
 $dsn="$dbms:host=$host;dbname=$dbName";
 $dbh = new PDO($dsn, $user, $pass); //初始化一个PDO对象
