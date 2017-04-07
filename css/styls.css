@@ -1,0 +1,91 @@
+body, div, a, img, h1, h2, h3, h4, h5, h6, ul, li,textarea,input,buttom, p {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    text-decoration: none;
+    font-family:"Microsoft Yahei", Arial;
+    font-size:14px;
+	 color:#656565;
+}
+*{ margin:0; padding:0;}
+ul li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+/*清除浮动*/
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*+height:1%;}
+
+
+/**********beijing 开始 ************/
+
+.beijing{ background:url(../images/bj_r1_c1.jpg) no-repeat center; width: 100%; height:380px; min-width: 1200px;}
+.logo{ width:1200px; height:63px; display:block; margin: 0 auto;}
+.wenan{ background:url(../images/1.png) no-repeat center center; width: 848px; height: 156px; position: absolute; left: 50%; margin-left: -400px; top: 138px;}
+
+
+/**********平面设计 开始 ************/
+.pingmian{ background:url(../images/bj_r2_c1.jpg) no-repeat center; width: 100%; /*height:1639px;*/ min-width: 1200px;background-size: cover;}
+.pingmian-1{ width:1200px; height:auto; display:block; margin: 0 auto; }
+.pingmian-1 h2{ width:388px; height:80px; display:block; background:url(../images/2.png) no-repeat; margin: 0 auto; text-indent:-9999px;}
+.mbx{ width:auto; height:20px; display:block; /*background-color:#F69;*/ margin-top:25px;}
+.mbx-1{ width:430px; height:20px; margin: 0 auto; /*background-color:#69F;*/}
+.xing-left{ width:18px; height:17px; display:block; background:url(../images/3.png) no-repeat; float:left; margin-top:2px; }
+.xing-right{ width:18px; height:17px; display:block; background:url(../images/3.png) no-repeat; float:right; margin-top:-20px; }
+.wenzi{
+	text-align:center;
+	font-size:16px;
+	font-weight: bold; color:#FFF;
+}
+
+/**********作品1 开始 ************/
+.zuopin{ width:366px; height:355px; display:block; float:left;  margin-top:50px;}
+.zuopin-1{width:366px; height:278px; display:block; background:url(../images/6.png) no-repeat;}
+.zuopin-2{ width:356px; height:248px; display:block; padding:5px;}
+
+.Pushbutton{ width:240px; height:57px; display:block; margin: 0 auto;  margin-top:10px;}
+.dianping{ width:108px; height:57px; display:block; float:left; background:url(../images/4.png) no-repeat; text-indent:-9999px;}
+.ann{ width:108px; height:57px; display:block; float:right; background:url(../images/5.png) no-repeat; text-indent:-9999px;}
+
+/**********作品1 结束 ************/
+
+/**********平面设计 结束 ************/
+
+/**********网页设计 开始 ************/
+.pingmian-2{ width:1200px; height:auto; display:block; margin: 0 auto; }
+.pingmian-2 h2{ width:388px; height:80px; display:block; background:url(../images/7.fw.png) no-repeat; margin: 0 auto; text-indent:-9999px;}
+/**********网页设计 结束 ************/
+
+/**********版权所有 开始 ************/
+
+.foom{ height:70px; background:#0D0900; display:block;/*
+margin-top:94px;*/}
+.foom-wenzi{ font-size:14px; color:#FFF; text-align:center; padding-top:26px;}
+
+.foom-wenzi span a{
+	color:#FFF;
+
+}
+.foom-wenzi span a:hover{
+	color:#FFF;
+	text-decoration: underline;
+}
+
+
+
+.foom-1 {
+    width: 1100px;
+    height: 220px;
+    display: block;
+    background: url(../images/foom.fw.png) no-repeat;
+    margin-top: -127px;
+    /* position: absolute; */
+    /* left: 50%; */
+    /* margin-left: -400px; */
+    /* z-index: -9999; */
+    margin: auto;
+    margin-top: -127px;
+}
