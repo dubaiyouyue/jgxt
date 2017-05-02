@@ -33,7 +33,7 @@
 	echo $sssddd['sy'];?>"></p>
 	<p><i class="fi-foot"></i>颜色:<input type="text" name="syys" value="<?php
 	echo $sssddd['syys'];?>"></p>
-<p><i class="fi-foot"></i>宽度:<input type="text" name="sykd" value="<?php
+<p><i class="fi-foot"></i>宽度(当水印横向显示不全时，请增加宽度):<input type="text" name="sykd" value="<?php
 	echo $sssddd['sykd'];?>"></p>
 	
 <p><i class="fi-foot"></i>高度:<input type="text" name="sygd" value="<?php
@@ -45,8 +45,27 @@
 <p><i class="fi-foot"></i>顶部:<input type="text" name="syyb" value="<?php
 	echo $sssddd['syyb'];?>"></p>
 	
-<p><i class="fi-foot"></i>旋转:<input type="text" name="syxz" value="<?php
+<p><i class="fi-foot"></i>印高(单行水印顶部偏移量,参考文字水印字体大小修改):<input type="text" name="syybyingg" value="<?php
+	echo $sssddd['syybyingg'];?>"></p>
+	
+	<p><i class="fi-foot"></i>文字水印字体大小:<input type="text" name="syyssiez" value="<?php
+	echo $sssddd['syyssiez'];?>"></p>
+	
+<p><i class="fi-foot"></i>图片水印:<input type="text" name="imagethumb" value="<?php
+	echo $sssddd['imagethumb'];?>"></p>
+	
+	
+<p><i class="fi-foot"></i>旋转值:<input type="text" name="syxz" value="<?php
 	echo $sssddd['syxz'];?>"></p>
+	
+	
+<p><i class="fi-foot"></i>单行水印:<input type="radio" <?php
+	if($sssddd['syxzssdhsy']==0) echo 'checked="checked"';
+?> name="syxzssdhsy" value="0" />关闭 <input type="radio" <?php
+	if($sssddd['syxzssdhsy']==1) echo 'checked="checked"';
+?> name="syxzssdhsy" value="1" />开启</p>
+	
+	
 	
 <p><i class="fi-foot"></i>旋转:<input type="radio" <?php
 	if($sssddd['syxzss']==0) echo 'checked="checked"';

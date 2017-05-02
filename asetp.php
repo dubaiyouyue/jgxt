@@ -18,12 +18,16 @@
 	$sygd=$_POST['sygd']+0;
 	$syzb=$_POST['syzb']+0;
 	$syyb=$_POST['syyb']+0;
+	$syybyingg=$_POST['syybyingg']+0;
+	$syyssiez=$_POST['syyssiez']+0;
+	$imagethumb=$_POST['imagethumb'];
 	$syxz=$_POST['syxz']+0;
 	$syxzss=$_POST['syxzss'];
+	$syxzssdhsy=$_POST['syxzssdhsy'];
 	$syys=$_POST['syys'];
 	$syxzssf=$_POST['syxzssf'];
 	
-		$stmt = $dbh->prepare("UPDATE conf SET re=:re,sy=:sy,my=:my,dp=:dp,tp=:tp,yktp=:yktp,nbtp=:nbtp,sygd=:sygd,sykd=:sykd,syzb=:syzb,syyb=:syyb,syxz=:syxz,syxzss=:syxzss,syys=:syys,syxzssf=:syxzssf,qtdjs=:qtdjs");
+		$stmt = $dbh->prepare("UPDATE conf SET re=:re,sy=:sy,my=:my,dp=:dp,tp=:tp,yktp=:yktp,nbtp=:nbtp,sygd=:sygd,sykd=:sykd,syzb=:syzb,syyb=:syyb,syybyingg=:syybyingg,syyssiez=:syyssiez,syxz=:syxz,imagethumb=:imagethumb,syxzss=:syxzss,syxzssdhsy=:syxzssdhsy,syys=:syys,syxzssf=:syxzssf,qtdjs=:qtdjs");
 		$stmt->bindParam(':sy', $sy);
 		$stmt->bindParam(':qtdjs', $qtdjs);
 		$stmt->bindParam(':re', $re);
@@ -31,8 +35,12 @@
 		$stmt->bindParam(':my', $my);
 		$stmt->bindParam(':tp', $tp);
 		$stmt->bindParam(':syxz', $syxz);
+		$stmt->bindParam(':imagethumb', $imagethumb);
 		$stmt->bindParam(':syxzss', $syxzss);
+		$stmt->bindParam(':syxzssdhsy', $syxzssdhsy);
 		$stmt->bindParam(':syyb', $syyb);
+		$stmt->bindParam(':syybyingg', $syybyingg);
+		$stmt->bindParam(':syyssiez', $syyssiez);
 		$stmt->bindParam(':syzb', $syzb);
 		$stmt->bindParam(':sygd', $sygd);
 		$stmt->bindParam(':sykd', $sykd);

@@ -6,49 +6,19 @@
 	}
 	if(date('j',$ttitme)>$conf['my']) exit('本月作品'.$conf['my'].'号之后禁止修改！');
 $file=$_FILES["file"]["tmp_name"];
-
-
-
-//2017.05.02
-$img_info = getimagesize($file);
-$img_info_height=$img_info['1'];
-//end
-
-$imagethumb=$conf['imagethumb'];
-$dtsyyy=$conf['syxzssdhsy'];
-$sykd=$conf['sykd'];
-$sygd=$conf['sygd'];
-$syzb=$conf['syzb'];
-$syyb=$conf['syyb'];
-
-
 if(!$file) exit('图片上传失败！');
 $image = new imagick($file); 
 $syxzsssyxzss=$conf['syxz'];
 if($conf['syxzss']) $syxzsssyxzss=rand(-360,360);
 if($conf['syxzssf']==1){
 $im = new imagick();
-
-
-//2017.05.02  单条水印
-
-	if($dtsyyy){
-		//$syzb=0;
-		$sygd=$img_info_height/2+$conf['syybyingg'];
-		$syyb=$sygd;
-	}
-//end
-
-$im->newimage( $sykd, $sygd, new imagickpixel( "none" ) );
-
+$im->newimage( $conf['sykd'], $conf['sygd'], new imagickpixel( "none" ) ); 
 $draw = new imagickdraw(); 
 $draw->setfillcolor(new imagickpixel( $conf['syys'] ));
 //$draw->setgravity(imagick::gravity_northwest);
 $draw->setFont('simsun.ttc');
-	//$draw->setStrokeWidth(2);
-    $draw->setFontSize($conf['syyssiez']);
 $waterText=$conf['sy'];
-$draw->annotation($syzb,$syyb ,$waterText);
+$draw->annotation($conf['syzb'],$conf['syyb'] ,$waterText);
 //$draw->setgravity(imagick::gravity_southeast);
 //$draw->annotation(5,15 ,'copyright');
 $im->drawimage( $draw);
@@ -58,13 +28,8 @@ $im->rotateImage(new ImagickPixel('none'), $syxzsssyxzss);
 
 $image = $image->textureimage($im);
 }else if($conf['syxzssf']==2){
-	$src2 = new Imagick($imagethumb);
 	
-
-
-	if($dtsyyy){
-		$src2->thumbnailImage($img_info['0'],$img_info_height/2+$conf['syybyingg']);  
-	}
+	$src2 = new Imagick('logo3.png');
 	$src2->rotateImage(new ImagickPixel('none'), $syxzsssyxzss);
 	$image = $image->textureimage($src2);
 }
