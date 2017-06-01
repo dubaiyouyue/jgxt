@@ -14,7 +14,8 @@ $user='root';      //数据库连接用户名
 $pass='root';          //对应的密码
 $dsn="$dbms:host=$host;dbname=$dbName";
 $dbh = new PDO($dsn, $user, $pass); //初始化一个PDO对象
-$dbh->query("SET NAMES utf8");  // $_pdo->exec('SET NAMES utf8');  //设置数据库编码，两种方法都可以
+$dbh->query("SET NAMES utf8");  // $_pdo->exec('SET NAMES utf8');  
+//设置数据库编码，两种方法都可以
 foreach ($dbh->query('SELECT * from conf') as $row) {
 	$conf[]=$row;
 }
