@@ -88,9 +88,9 @@
 	
 	<p><input type="text" value="" id="sdfsaassss" placeholder="请输入作品备注说明关键词" /><button type="button" class="button tiny" onclick="asdfsdsss();">搜索</button></p>
 	
-	<p><i class="fi-layout"></i>项目封面 <a href="javascript:;" onclick="upfengmian();" style="font-size:12px;<?php
+	<p><i class="fi-layout"></i>项目封面 <a href="javascript:;" onclick="upfengmian();" style="font-size:13px;<?php
 	if(date('j',$ttitme)>($conf['my']-1)) echo 'display:none;';
-?>"><i class="fi-paint-bucket"></i>修改</a></p>
+?>"><i class="fi-paint-bucket"></i>修改</a> <span style="font-size:12px;"><i class="fi-crop"></i>尺寸: 354x249</span></p>
 	<p><img src="<?php echo $newfmurl;?>" width="354" height="249" /></p><!--style="height: 180px;"-->
 	
 	<p class="newbotttom0px"><i class="fi-checkbox"></i>最新作品修改版本：</p>

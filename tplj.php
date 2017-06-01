@@ -48,6 +48,10 @@
 		$listdd[][$v['uid']]=$v;
 		$list[$v['uid']]=$v;
 	}
+	
+	$tp_arr_sj=array();//修复部门作品空值时候投票统计数
+	$tp_arr_wy=array();//20170531
+	
 	foreach ($listdd as $k=>$v) {
 		
 		foreach($sssdddindex as $ku=>&$vu){
@@ -62,7 +66,8 @@
 	}
 	arsort($tp_arr_sj);
 	arsort($tp_arr_wy);
-	if($tp_arr_sj && $tp_arr_wy) $tp_arr=$tp_arr_sj+$tp_arr_wy;
+	//if($tp_arr_sj && $tp_arr_wy)  //修复部门作品空值时候投票统计数 20170531
+	$tp_arr=$tp_arr_sj+$tp_arr_wy;
 	//dump($sssdddindex);exit;
 	
 	$title='投票链接';
